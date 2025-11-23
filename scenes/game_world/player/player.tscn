@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkiet13jnna2m"]
+[gd_scene load_steps=6 format=3 uid="uid://dkiet13jnna2m"]
 
 [ext_resource type="Script" uid="uid://dypck0cj1wmxf" path="res://scenes/game_world/player/player_manager.gd" id="1_txs4e"]
 [ext_resource type="Script" uid="uid://coxbsxucgposx" path="res://scenes/game_world/crosshair.gd" id="2_w1fsa"]
+[ext_resource type="Script" uid="uid://bjpmu5sklv5h8" path="res://addons/raytraced_audio/raytraced_audio_listener.gd" id="3_gop4e"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_itdsy"]
 height = 1.7
@@ -50,3 +51,8 @@ grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 script = ExtResource("2_w1fsa")
+
+[node name="RaytracedAudioListener" type="AudioListener3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8820202, 0)
+script = ExtResource("3_gop4e")
+metadata/_custom_type_script = "uid://bjpmu5sklv5h8"

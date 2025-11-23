@@ -1,6 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dagqtbldaccgh"]
+[gd_scene load_steps=11 format=3 uid="uid://dagqtbldaccgh"]
 
 [ext_resource type="Script" uid="uid://dwyx06nsevwk4" path="res://scenes/game_world/world_mesh.gd" id="1_o82f3"]
+[ext_resource type="Script" uid="uid://dkb8ltjc6067n" path="res://addons/raytraced_audio/raytraced_audio_player_3d.gd" id="2_ojvrf"]
+[ext_resource type="AudioStream" uid="uid://6c134egcey8k" path="res://assets/music/sweet-life-luxury-chill-438146.mp3" id="2_w8bpt"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ex5n1"]
 size = Vector2(24, 8)
@@ -35,6 +37,16 @@ script = ExtResource("1_o82f3")
 [node name="StaticBody3D" type="StaticBody3D" parent="Walls/MeshInstance3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_psba1")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -13.605336, 0.96953917, 10.711875)
+mesh = SubResource("PlaneMesh_ex5n1")
+script = ExtResource("1_o82f3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Walls/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/MeshInstance3D4/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_psba1")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Walls"]
@@ -74,3 +86,10 @@ collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerWall"]
 shape = SubResource("WorldBoundaryShape3D_hn4xm")
+
+[node name="RaytracedAudioPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.778574, 1.6990147, 16.484257)
+stream = ExtResource("2_w8bpt")
+playback_type = 1
+script = ExtResource("2_ojvrf")
+metadata/_custom_type_script = "uid://dkb8ltjc6067n"

@@ -90,7 +90,8 @@ shape = SubResource("WorldBoundaryShape3D_hn4xm")
 [node name="RaytracedAudioPlayer3D" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.778574, 1.6990147, 16.484257)
 stream = ExtResource("2_w8bpt")
+attenuation_model = 1
+unit_size = 5.0
 autoplay = true
-playback_type = 1
 script = ExtResource("2_ojvrf")
 metadata/_custom_type_script = "uid://dkb8ltjc6067n"

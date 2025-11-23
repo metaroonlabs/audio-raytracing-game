@@ -589,7 +589,7 @@ Master Bus
 │   └── Individual Player Buses (with LowPass for muffling)
 │       └── RaytracedAudioPlayer3D nodes
 └── RaytracedAmbient (with Panner effect)
-    └── Ambient sound sources
+	└── Ambient sound sources
 
 ```
 
